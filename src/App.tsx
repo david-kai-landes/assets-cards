@@ -7,7 +7,11 @@ import "../src/styles/App.css";
 function App() {
   // const [count, setCount] = useState(0);
 
-  return <div> NOOOO ahhaahh</div>;
+  return (
+    <div>
+      <h1>Assets Cards</h1>
+    </div>
+  );
 }
 
 export default App;
