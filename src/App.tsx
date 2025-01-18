@@ -1,7 +1,3 @@
-// import { useState } from "react";
-// import React from "react";
-// import reactLogo from "./assets/react.svg";
-// import viteLogo from "/vite.svg";
 import CardList from "./components/CardList";
 import "../src/styles/App.css";
 

@@ -25,7 +25,7 @@ const AssetCard: React.FC<CardsProps> = ({
   return (
     <Card className={styles.card}>
       <CardContent>
-        <Box className={styles.badget}>{category}</Box>
+        <Box className={styles.badge}>{category}</Box>
         <Typography>{title}</Typography>
         <Typography>Price: {price}</Typography>
         <Typography>Market Cap: {marketCap}</Typography>
