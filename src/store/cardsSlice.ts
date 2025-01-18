@@ -1,5 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
 //PayloadAction
+import NvidiaImage from "../imgs/nvidia.png";
+import BitcoinImage from "../imgs/bitcoin.png";
+import PudgyPenguisImage from "../imgs/PudgyPenguins.png";
 
 interface CardData {
   id: number;
@@ -8,6 +11,7 @@ interface CardData {
   marketCap: string;
   change: string;
   category: "Stock" | "Crypto" | "NFT";
+  image: string;
 }
 
 const initialState: CardData[] = [
@@ -18,6 +22,7 @@ const initialState: CardData[] = [
     marketCap: "$3.31T",
     change: "-2.19%",
     category: "Stock",
+    image: NvidiaImage,
   },
   {
     id: 2,
@@ -26,6 +31,7 @@ const initialState: CardData[] = [
     marketCap: "$2.0T",
     change: "+2.19.%",
     category: "Crypto",
+    image: BitcoinImage,
   },
   {
     id: 3,
@@ -34,6 +40,7 @@ const initialState: CardData[] = [
     marketCap: "361 ETH",
     change: "+1.12%",
     category: "NFT",
+    image: PudgyPenguisImage,
   },
 ];
 

@@ -1,6 +1,12 @@
 .card {
+  background-color: aqua;
+  width: 341px;
+  height: 353px;
   margin: 10px;
-  border-radius: 10px;
+  border-top-left-radius: 24px !important;
+  border-top-right-radius: 8px !important;
+  border-bottom-left-radius: 8px !important;
+  border-bottom-right-radius: 24px !important;
 }
 
 .card:hover {

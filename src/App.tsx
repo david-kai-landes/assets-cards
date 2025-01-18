@@ -6,7 +6,6 @@ function App() {
 
   return (
     <div>
-      <h1>Assets Cards</h1>
       <CardList />
     </div>
   );
