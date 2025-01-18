@@ -1,0 +1,14 @@
+.card {
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.badge {
+  background-color: #eee;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+.button {
+  margin-top: 10px;
+}
