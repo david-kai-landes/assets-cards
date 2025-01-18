@@ -15,10 +15,12 @@
 }
 
 .badge {
+  width: 86px;
+  height: 86px;
   background-color: #eee;
   padding: 5px;
-  border-radius: 5px;
-  font-size: 12px;
+  border-radius: 50%;
+  /* font-size: 12px; */
 }
 .button {
   margin-top: 10px;

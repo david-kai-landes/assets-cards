@@ -28,7 +28,7 @@ const AssetCard: React.FC<CardsProps> = ({
   return (
     <>
       <Box className={styles.badge}>{category}</Box>
-      ll
+
       <CardMedia
         component="img"
         image={image}
