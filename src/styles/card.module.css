@@ -1,7 +1,7 @@
 .cardWrapper {
   position: relative;
   width: 341px;
-  height: 353px;
+  height: 331px;
   margin: 10px;
 }
 
@@ -66,10 +66,108 @@
   display: flex;
   justify-content: space-between;
 }
-.dataColumn {
+.dataColumnOne {
   margin-bottom: 5px;
+  text-align: left;
+}
+.dataColumnTwo {
+  margin-bottom: 5px;
+  text-align: right;
 }
 /* =============================================== */
+.price {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+.priceText {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.arrowIconUp {
+  background-color: rgba(200, 230, 201, 1);
+  border-radius: 50%;
+  margin: 1px;
+  color: rgba(76, 175, 80, 1);
+}
+.arrowIconDown {
+  background-color: rgba(254, 205, 210, 1);
+  border-radius: 50%;
+  margin: 1px;
+  color: rgba(211, 47, 47, 1);
+}
+
+/* =============================================== */
+.changeContainerStock {
+  display: flex;
+  width: 81px;
+  border-radius: 100px;
+  padding: 2px;
+  background-color: rgba(254, 235, 238, 1);
+  border: 3px solid rgba(211, 47, 47, 1);
+}
+.changeContainerCrypto {
+  display: flex;
+  width: 81px;
+  border-radius: 100px;
+  padding: 2px;
+  background-color: rgba(254, 235, 238, 1);
+  border: 3px solid rgba(76, 175, 80, 1);
+}
+/* .changeContainerNFT {
+  display: flex;
+  width: 81px;
+  border-radius: 100px;
+  padding: 2px;
+  background-color: rgba(254, 235, 238, 1);
+  border: 3px solid rgba(211, 47, 47, 1);
+} */
+/* =============================================== */
+
+.changeStock {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(211, 47, 47, 1);
+}
+.changeCrypto {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(76, 175, 80, 1);
+}
+
+.changeText {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+.ethereumText {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.marketCap {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+
+.marketCapText {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(255, 255, 255, 1);
+}
+
 /* =============================================== */
 /* =============================================== */
 /* =============================================== */
