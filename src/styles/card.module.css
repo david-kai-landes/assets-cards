@@ -313,6 +313,12 @@
   background-color: rgba(245, 0, 87, 1);
   color: white;
 }
+
+.activeBookmarked {
+  color: goldenrod;
+  transform: scale(1.2);
+  transition: transform 0.2s ease, color 0.2 ease;
+}
 /* ============================== */
 
 .LanguageOutlinedIcon {

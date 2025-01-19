@@ -1,4 +1,4 @@
-import * as React from "react";
+import React, { useState } from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -31,6 +31,11 @@ const AssetCard: React.FC<CardsProps> = ({
   image,
   url,
 }) => {
+  const [bookmarked, setBookmarked] = useState(false);
+  //
+  const handleBoolmarked = () => {
+    setBookmarked(!bookmarked);
+  };
   //
   const renderDataColumnOne = () => (
     <>
@@ -110,7 +115,9 @@ const AssetCard: React.FC<CardsProps> = ({
                 : category === "Crypto"
                 ? styles.cryptoOutLinedIcon
                 : styles.nftOutLinedIcon
-            }`}
+            } ${bookmarked ? styles.activeBookmarked : ""}`}
+            onClick={handleBoolmarked}
+            style={{ cursor: "pointer" }}
           />
           <div
             className={`${styles.cardMediaCategoty} ${
@@ -178,7 +185,7 @@ const AssetCard: React.FC<CardsProps> = ({
                   style={{ textTransform: "none" }}
                   onClick={() => window.open(url, "_blank")}
                 >
-                  View report
+                  View Report
                 </Button>
               </div>
             </div>
