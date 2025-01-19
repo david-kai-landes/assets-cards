@@ -80,9 +80,28 @@ const AssetCard: React.FC<CardsProps> = ({
 
   return (
     <>
-      {/* <Typography>{title}</Typography> */}
-      {/* <div className={styles.badge}>{category}</div> */}
       <div className={styles.cardWrapper}>
+        <div
+          className={`${styles.categoryCircleContainer} ${
+            category === "Stock"
+              ? styles.stockCircleContainer
+              : category === "Crypto"
+              ? styles.cryptoCircleContainer
+              : styles.nftCircleContainer
+          }`}
+        >
+          <div
+            className={`${styles.categoryCircle} ${
+              category === "Stock"
+                ? styles.stockCircle
+                : category === "Crypto"
+                ? styles.cryptoCircle
+                : styles.nftCircle
+            }`}
+          >
+            {category}
+          </div>
+        </div>
         <div className={styles.cardMediaWrapper}>
           <BookmarkBorderOutlinedIcon
             className={`${styles.outLinedIcon} ${
