@@ -12,6 +12,7 @@ interface CardData {
   change: string;
   category: "Stock" | "Crypto" | "NFT";
   image: string;
+  url: string;
 }
 
 const initialState: CardData[] = [
@@ -20,18 +21,20 @@ const initialState: CardData[] = [
     title: "Nvidia",
     price: "$137.71",
     marketCap: "$3.31T",
-    change: "-2.19%",
+    change: "2.19%",
     category: "Stock",
     image: NvidiaImage,
+    url: "https://www.cryptofaxreport.com/reports/stock/NVDA",
   },
   {
     id: 2,
     title: "Bitcoin",
     price: "$96,826.97",
     marketCap: "$2.0T",
-    change: "+2.19.%",
+    change: "2.19%",
     category: "Crypto",
     image: BitcoinImage,
+    url: "https://www.cryptofaxreport.com/reports/coin/bitcoin",
   },
   {
     id: 3,
@@ -41,6 +44,7 @@ const initialState: CardData[] = [
     change: "+1.12%",
     category: "NFT",
     image: PudgyPenguisImage,
+    url: "https://www.cryptofaxreport.com/reports/nft/pudgy-penguins",
   },
 ];
 

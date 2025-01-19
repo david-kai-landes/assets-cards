@@ -17,6 +17,9 @@
   border-bottom-left-radius: 8px !important;
   border-bottom-right-radius: 24px !important;
   overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .stockCard {
@@ -41,16 +44,19 @@
 
 .cardMedia {
   position: absolute;
-  top: -78px;
+  top: -88px;
   right: -6px;
   width: 256px !important;
   height: 256px;
   padding: 10px;
   z-index: 2;
-  border-top-left-radius: 8px !important;
+  border-top-left-radius: 18px !important;
   border-top-right-radius: 24px !important;
   border-bottom-left-radius: 24px !important;
-  border-bottom-right-radius: 8px !important;
+  border-bottom-right-radius: 18px !important;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
 }
 
 .stockCardMedia {
@@ -68,7 +74,6 @@
 
 /* ============================== */
 .cardContent {
-  padding: 10px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
@@ -78,18 +83,29 @@
   justify-content: space-between;
 }
 .dataColumnOne {
-  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
   text-align: left;
 }
 .dataColumnTwo {
-  margin-bottom: 5px;
   text-align: right;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  gap: 4px;
+}
+
+.changeContainernft {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .nftContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
   text-align: left;
   align-items: flex-start;
 }
@@ -128,10 +144,16 @@
   border: 3px solid rgba(56, 142, 60, 1);
 }
 
-.arrowIcon {
-  color: inherit;
-  /* background-color: inherit; */
-  margin: 1px;
+.arrowIconStock {
+  color: rgba(211, 47, 47, 1);
+  background-color: rgba(254, 205, 210, 1);
+  margin: 2px 8px 2px 2px;
+  border-radius: 50%;
+}
+.arrowIconCrypto {
+  color: rgba(56, 142, 60, 1);
+  background-color: rgba(200, 230, 201, 1);
+  margin: 2px 8px 2px 2px;
   border-radius: 50%;
 }
 
@@ -165,7 +187,11 @@
 /* ============================== */
 
 .button {
-  margin-top: 10px;
+  background-color: rgba(33, 150, 243, 1) !important;
+  text-transform: none;
+  &:hover {
+    background-color: rgba(30, 136, 229, 1) !important;
+  }
 }
 
 /* ============================== */
@@ -177,7 +203,7 @@
   align-content: center;
   position: absolute;
   text-align: center;
-  bottom: 31px;
+  bottom: 41px;
   right: 196px;
   width: 58px;
   height: 26px;
@@ -187,17 +213,20 @@
 }
 
 .stockCategory {
+  font-weight: 500;
   border: 2px solid rgba(76, 175, 80, 1);
   background-color: rgba(232, 245, 233, 1);
   color: rgba(76, 175, 80, 1);
 }
 .cryptoCategory {
+  font-weight: 500;
   border: 2px solid rgba(0, 176, 255, 1);
   background-color: rgba(227, 242, 253, 1);
   color: rgba(0, 176, 255, 1);
 }
 
 .nftCategory {
+  font-weight: 500;
   border: 2px solid rgba(245, 0, 87, 1);
   background-color: rgba(252, 228, 236, 1);
   color: rgba(245, 0, 87, 1);
@@ -206,7 +235,7 @@
 .cardMediaTitle {
   align-content: center;
   position: absolute;
-  bottom: -192px;
+  bottom: -181px;
   right: 7px;
   width: 236px;
   height: 41px;
@@ -223,9 +252,11 @@
 .outLinedIcon {
   align-content: center;
   position: absolute;
-  bottom: 22px;
+  bottom: 32px;
   right: 19px;
-
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   padding: 16px 16px;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
@@ -250,8 +281,9 @@
   position: absolute;
   bottom: 243px;
   right: 284px;
-  background-color: black;
-  color: white;
+  box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px,
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px,
+    rgba(0, 0, 0, 0.09) 0px 32px 16px;
   padding: 16px 16px;
   border-top-right-radius: 8px;
   border-bottom-right-radius: 8px;

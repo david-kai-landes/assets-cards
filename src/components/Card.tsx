@@ -19,6 +19,7 @@ interface CardsProps {
   change: string;
   category: "Stock" | "Crypto" | "NFT";
   image: string;
+  url: string;
 }
 
 const AssetCard: React.FC<CardsProps> = ({
@@ -28,6 +29,7 @@ const AssetCard: React.FC<CardsProps> = ({
   change,
   category,
   image,
+  url,
 }) => {
   //
   const renderDataColumnOne = () => (
@@ -48,7 +50,7 @@ const AssetCard: React.FC<CardsProps> = ({
       return (
         <>
           <div className={`${styles.changeContainer} ${styles.stock}`}>
-            <KeyboardArrowDownIcon className={styles.arrowIcon} />
+            <KeyboardArrowDownIcon className={styles.arrowIconStock} />
             <Typography className={styles.change}>{change}</Typography>
           </div>
           <Typography className={styles.changeText}>Change 24hrs</Typography>
@@ -59,7 +61,7 @@ const AssetCard: React.FC<CardsProps> = ({
       return (
         <>
           <div className={`${styles.changeContainer} ${styles.crypto}`}>
-            <KeyboardArrowUpIcon className={styles.arrowIcon} />
+            <KeyboardArrowUpIcon className={styles.arrowIconCrypto} />
             <Typography className={styles.change}>{change}</Typography>
           </div>
           <Typography className={styles.changeText}>Change 24hrs</Typography>
@@ -151,7 +153,12 @@ const AssetCard: React.FC<CardsProps> = ({
                 }`}
               >
                 {renderDataColumnTwo()}
-                <Button variant="contained" className={styles.button}>
+                <Button
+                  variant="contained"
+                  className={styles.button}
+                  style={{ textTransform: "none" }}
+                  onClick={() => window.open(url, "_blank")}
+                >
                   View report
                 </Button>
               </div>
