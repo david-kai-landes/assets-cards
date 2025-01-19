@@ -4,6 +4,8 @@ import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
 import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import BookmarkBorderOutlinedIcon from "@mui/icons-material/BookmarkBorderOutlined";
+import LanguageOutlinedIcon from "@mui/icons-material/LanguageOutlined";
 import Typography from "@mui/material/Typography";
 import styles from "../styles/card.module.css";
 import paperImage from "../imgs/paper.png";
@@ -80,6 +82,26 @@ const AssetCard: React.FC<CardsProps> = ({
       {/* <div className={styles.badge}>{category}</div> */}
       <div className={styles.cardWrapper}>
         <div className={styles.cardMediaWrapper}>
+          <BookmarkBorderOutlinedIcon
+            className={`${styles.outLinedIcon} ${
+              category === "Stock"
+                ? styles.stockOutLinedIcon
+                : category === "Crypto"
+                ? styles.cryptoOutLinedIcon
+                : styles.nftOutLinedIcon
+            }`}
+          />
+          <div
+            className={`${styles.cardMediaCategoty} ${
+              category === "Stock"
+                ? styles.stockCategory
+                : category === "Crypto"
+                ? styles.cryptoCategory
+                : styles.nftCategory
+            }`}
+          >
+            {category}
+          </div>
           <CardMedia
             component="img"
             image={image}
@@ -109,6 +131,15 @@ const AssetCard: React.FC<CardsProps> = ({
             backgroundPosition: "center",
           }}
         >
+          <LanguageOutlinedIcon
+            className={`${styles.LanguageOutlinedIcon} ${
+              category === "Stock"
+                ? styles.stockLanguageOutlinedIcon
+                : category === "Crypto"
+                ? styles.cryptoLanguageOutlinedIcon
+                : styles.nftLanguageOutlinedIcon
+            }`}
+          />
           <CardContent className={styles.cardContent}>
             <div className={styles.dataSection}>
               <div className={styles.dataColumnOne}>

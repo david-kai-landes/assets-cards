@@ -173,6 +173,36 @@
   position: relative;
   z-index: 2;
 }
+.cardMediaCategoty {
+  align-content: center;
+  position: absolute;
+  text-align: center;
+  bottom: 31px;
+  right: 196px;
+  width: 58px;
+  height: 26px;
+  border-radius: 100px;
+  color: white;
+  z-index: 3;
+}
+
+.stockCategory {
+  border: 2px solid rgba(76, 175, 80, 1);
+  background-color: rgba(232, 245, 233, 1);
+  color: rgba(76, 175, 80, 1);
+}
+.cryptoCategory {
+  border: 2px solid rgba(0, 176, 255, 1);
+  background-color: rgba(227, 242, 253, 1);
+  color: rgba(0, 176, 255, 1);
+}
+
+.nftCategory {
+  border: 2px solid rgba(245, 0, 87, 1);
+  background-color: rgba(252, 228, 236, 1);
+  color: rgba(245, 0, 87, 1);
+}
+
 .cardMediaTitle {
   align-content: center;
   position: absolute;
@@ -188,4 +218,55 @@
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
   z-index: 3;
+}
+
+.outLinedIcon {
+  align-content: center;
+  position: absolute;
+  bottom: 22px;
+  right: 19px;
+
+  padding: 16px 16px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 3;
+}
+
+.stockOutLinedIcon {
+  background-color: rgba(76, 175, 80, 1);
+  color: white;
+}
+.cryptoOutLinedIcon {
+  background-color: rgba(0, 176, 255, 1);
+  color: white;
+}
+.nftOutLinedIcon {
+  background-color: rgba(245, 0, 87, 1);
+  color: white;
+}
+
+.LanguageOutlinedIcon {
+  align-content: center;
+  position: absolute;
+  bottom: 243px;
+  right: 284px;
+  background-color: black;
+  color: white;
+  padding: 16px 16px;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 3;
+}
+
+.stockLanguageOutlinedIcon {
+  background-color: rgba(76, 175, 80, 1);
+  color: white;
+}
+.cryptoLanguageOutlinedIcon {
+  background-color: rgba(0, 176, 255, 1);
+  color: white;
+}
+.nftLanguageOutlinedIcon {
+  background-color: rgba(245, 0, 87, 1);
+  color: white;
 }
