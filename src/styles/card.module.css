@@ -1,8 +1,8 @@
 .cardWrapper {
+  margin: 50px;
   position: relative;
   width: 341px;
   height: 331px;
-  margin: 10px;
 }
 
 .card {
@@ -12,10 +12,6 @@
   align-items: stretch;
   width: 100%;
   height: 100%;
-  /* width: 341px; */
-  /* height: 353px; */
-  /* margin: 10px; */
-  border: 3px solid #4caf50;
   border-top-left-radius: 24px !important;
   border-top-right-radius: 8px !important;
   border-bottom-left-radius: 8px !important;
@@ -23,10 +19,15 @@
   overflow: hidden;
 }
 
-/* .card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.2);
-} */
+.stockCard {
+  border: 3px solid rgba(76, 175, 80, 1);
+}
+.cryptoCard {
+  border: 3px solid rgba(0, 176, 255, 1);
+}
+.nftCard {
+  border: 3px solid rgba(245, 0, 87, 1);
+}
 
 .badge {
   width: 86px;
@@ -34,34 +35,44 @@
   background-color: #4caf50;
   padding: 5px;
   border-radius: 50%;
-  /* font-size: 12px; */
 }
 
-/* =============================================== */
+/* ============================== */
 
 .cardMedia {
   position: absolute;
-  top: -50px;
+  top: -78px;
   right: -6px;
   width: 256px !important;
   height: 256px;
   padding: 10px;
-  border: 3px solid #4caf50;
   z-index: 2;
-  background-color: #e8f5e9;
   border-top-left-radius: 8px !important;
   border-top-right-radius: 24px !important;
   border-bottom-left-radius: 24px !important;
   border-bottom-right-radius: 8px !important;
 }
 
-/* =============================================== */
+.stockCardMedia {
+  border: 3px solid rgba(76, 175, 80, 1);
+  background-color: rgba(232, 245, 233, 1);
+}
+.cryptoCardMedia {
+  border: 3px solid rgba(0, 176, 255, 1);
+  background-color: rgba(227, 242, 253, 1);
+}
+.nftCardMedia {
+  border: 3px solid rgba(245, 0, 87, 1);
+  background-color: rgba(245, 228, 236, 1);
+}
+
+/* ============================== */
 .cardContent {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.6);
 }
 
-/* =============================================== */
+/* ============================== */
 .dataSection {
   display: flex;
   justify-content: space-between;
@@ -73,8 +84,16 @@
 .dataColumnTwo {
   margin-bottom: 5px;
   text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
 }
-/* =============================================== */
+
+.nftContainer {
+  text-align: left;
+  align-items: flex-start;
+}
+/* ============================== */
 .price {
   font-weight: 500;
   font-size: 20px;
@@ -88,57 +107,32 @@
   color: rgba(255, 255, 255, 1);
 }
 
-.arrowIconUp {
-  background-color: rgba(200, 230, 201, 1);
-  border-radius: 50%;
-  margin: 1px;
-  color: rgba(76, 175, 80, 1);
-}
-.arrowIconDown {
-  background-color: rgba(254, 205, 210, 1);
-  border-radius: 50%;
-  margin: 1px;
-  color: rgba(211, 47, 47, 1);
+/* ============================== */
+.changeContainer {
+  text-align: right;
+  display: flex;
+  align-items: center;
+  border-radius: 5px;
+  width: 90px;
+  border-radius: 100px;
 }
 
-/* =============================================== */
-.changeContainerStock {
-  display: flex;
-  width: 81px;
-  border-radius: 100px;
-  padding: 2px;
+.changeContainer.stock {
+  color: rgba(211, 47, 47, 1);
   background-color: rgba(254, 235, 238, 1);
   border: 3px solid rgba(211, 47, 47, 1);
 }
-.changeContainerCrypto {
-  display: flex;
-  width: 81px;
-  border-radius: 100px;
-  padding: 2px;
-  background-color: rgba(254, 235, 238, 1);
-  border: 3px solid rgba(76, 175, 80, 1);
+.changeContainer.crypto {
+  color: rgba(56, 142, 60, 1);
+  background-color: rgba(232, 245, 233, 1);
+  border: 3px solid rgba(56, 142, 60, 1);
 }
-/* .changeContainerNFT {
-  display: flex;
-  width: 81px;
-  border-radius: 100px;
-  padding: 2px;
-  background-color: rgba(254, 235, 238, 1);
-  border: 3px solid rgba(211, 47, 47, 1);
-} */
-/* =============================================== */
 
-.changeStock {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 32px;
-  color: rgba(211, 47, 47, 1);
-}
-.changeCrypto {
-  font-weight: 500;
-  font-size: 20px;
-  line-height: 32px;
-  color: rgba(76, 175, 80, 1);
+.arrowIcon {
+  color: inherit;
+  /* background-color: inherit; */
+  margin: 1px;
+  border-radius: 50%;
 }
 
 .changeText {
@@ -168,9 +162,30 @@
   color: rgba(255, 255, 255, 1);
 }
 
-/* =============================================== */
-/* =============================================== */
-/* =============================================== */
+/* ============================== */
+
 .button {
   margin-top: 10px;
+}
+
+/* ============================== */
+.cardMediaWrapper {
+  position: relative;
+  z-index: 2;
+}
+.cardMediaTitle {
+  align-content: center;
+  position: absolute;
+  bottom: -192px;
+  right: 7px;
+  width: 236px;
+  height: 41px;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: start;
+  padding: 5px 10px;
+  font-size: 20px;
+  border-bottom-left-radius: 8px;
+  border-bottom-right-radius: 8px;
+  z-index: 3;
 }

@@ -1,5 +1,4 @@
 import * as React from "react";
-// import Box from "@mui/material/Box";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
 import Button from "@mui/material/Button";
@@ -28,21 +27,82 @@ const AssetCard: React.FC<CardsProps> = ({
   category,
   image,
 }) => {
+  //
+  const renderDataColumnOne = () => (
+    <>
+      <Typography className={styles.price}>{price}</Typography>
+      <Typography className={styles.priceText}>
+        {category === "NFT" ? "Floor Price" : "Price"}
+      </Typography>
+      <Typography className={styles.marketCap}>{marketCap}</Typography>
+      <Typography className={styles.marketCapText}>
+        {category === "NFT" ? "Total Volume" : "Market Cap"}
+      </Typography>
+    </>
+  );
+
+  const renderDataColumnTwo = () => {
+    if (category === "Stock") {
+      return (
+        <>
+          <div className={`${styles.changeContainer} ${styles.stock}`}>
+            <KeyboardArrowDownIcon className={styles.arrowIcon} />
+            <Typography className={styles.change}>{change}</Typography>
+          </div>
+          <Typography className={styles.changeText}>Change 24hrs</Typography>
+        </>
+      );
+    }
+    if (category === "Crypto") {
+      return (
+        <>
+          <div className={`${styles.changeContainer} ${styles.crypto}`}>
+            <KeyboardArrowUpIcon className={styles.arrowIcon} />
+            <Typography className={styles.change}>{change}</Typography>
+          </div>
+          <Typography className={styles.changeText}>Change 24hrs</Typography>
+        </>
+      );
+    }
+
+    //NFT
+    return (
+      <div className={`${styles.changeContainernft} ${styles.nft}`}>
+        <Typography className={styles.ethereumText}>Ethereum</Typography>
+        <Typography className={styles.ethereumText}>Crypto Chain</Typography>
+      </div>
+    );
+  };
+
   return (
     <>
-      <div className={styles.badge}>{category}</div>
+      {/* <Typography>{title}</Typography> */}
+      {/* <div className={styles.badge}>{category}</div> */}
       <div className={styles.cardWrapper}>
-        <CardMedia
-          component="img"
-          image={image}
-          className={styles.cardMedia}
-          alt={title}
-        />
-
-        <Typography>{title}</Typography>
+        <div className={styles.cardMediaWrapper}>
+          <CardMedia
+            component="img"
+            image={image}
+            className={`${styles.cardMedia} ${
+              category === "Stock"
+                ? styles.stockCardMedia
+                : category === "Crypto"
+                ? styles.cryptoCardMedia
+                : styles.nftCardMedia
+            }`}
+            alt={title}
+          />
+          <div className={styles.cardMediaTitle}>{title}</div>
+        </div>
 
         <Card
-          className={styles.card}
+          className={`${styles.card} ${
+            category === "Stock"
+              ? styles.stockCard
+              : category === "Crypto"
+              ? styles.cryptoCard
+              : styles.nftCard
+          }`}
           style={{
             backgroundImage: `url(${paperImage})`,
             backgroundSize: "cover",
@@ -52,80 +112,14 @@ const AssetCard: React.FC<CardsProps> = ({
           <CardContent className={styles.cardContent}>
             <div className={styles.dataSection}>
               <div className={styles.dataColumnOne}>
-                {category === "Stock" ? (
-                  <>
-                    <Typography className={styles.price}>{price}</Typography>
-                    <Typography className={styles.priceText}>Price</Typography>
-                    <Typography className={styles.marketCap}>
-                      {marketCap}
-                    </Typography>
-                    <Typography className={styles.marketCapText}>
-                      Market Cap
-                    </Typography>
-                  </>
-                ) : category === "Crypto" ? (
-                  <>
-                    <Typography className={styles.price}>{price}</Typography>
-                    <Typography className={styles.priceText}>Price</Typography>
-                    <Typography className={styles.marketCap}>
-                      {marketCap}
-                    </Typography>
-                    <Typography className={styles.marketCapText}>
-                      Market Cap
-                    </Typography>
-                  </>
-                ) : (
-                  <>
-                    <Typography className={styles.price}>{price}</Typography>
-                    <Typography className={styles.priceText}>
-                      Floor Price
-                    </Typography>
-                    <Typography className={styles.marketCap}>
-                      {marketCap}
-                    </Typography>
-                    <Typography className={styles.marketCapText}>
-                      Total volume
-                    </Typography>
-                  </>
-                )}
+                {renderDataColumnOne()}
               </div>
-
-              <div className={styles.dataColumnTwo}>
-                {category === "Stock" ? (
-                  <>
-                    <div className={styles.changeContainerStock}>
-                      <KeyboardArrowDownIcon className={styles.arrowIconDown} />
-                      <Typography className={styles.changeStock}>
-                        {change}
-                      </Typography>
-                    </div>
-                    <Typography className={styles.changeText}>
-                      Change 24hrs
-                    </Typography>
-                  </>
-                ) : category === "Crypto" ? (
-                  <>
-                    <div className={styles.changeContainerCrypto}>
-                      <KeyboardArrowUpIcon className={styles.arrowIconUp} />
-                      <Typography className={styles.changeCrypto}>
-                        {change}
-                      </Typography>
-                    </div>
-                    <Typography className={styles.changeText}>
-                      Change 24hrs
-                    </Typography>
-                  </>
-                ) : (
-                  <div className={styles.changeContainerNFT}>
-                    <Typography className={styles.ethereumText}>
-                      Ethereum
-                    </Typography>
-                    <Typography className={styles.ethereumText}>
-                      Crypto Chain
-                    </Typography>
-                  </div>
-                )}
-
+              <div
+                className={`${styles.dataColumnTwo} ${
+                  category === "NFT" ? styles.nftContainer : ""
+                }`}
+              >
+                {renderDataColumnTwo()}
                 <Button variant="contained" className={styles.button}>
                   View report
                 </Button>
