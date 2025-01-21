@@ -1,51 +1,71 @@
-# React + TypeScript + Vite
+# Asset Dashboard Cards
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+The Asset Dashboard Cards project is an interactive and visually engaging web component designed to display financial data dynamically. Each card showcases essential information about a financial asset, such as stocks, cryptocurrencies, or NFTs. The cards are designed with a sleek, modern UI and responsive elements to provide users with an immersive experience.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+The project leverages React.js, Material-UI (MUI), and CSS modules to ensure reusable, scalable, and visually consistent components. It also incorporates dynamic routing and event handling to enhance interactivity and functionality.
+The Asset Dashboard Cards project is an interactive and visually engaging web component designed to display financial data dynamically. Each card showcases essential information about a financial asset, such as stocks, cryptocurrencies, or NFTs. The cards are designed with a sleek, modern UI and responsive elements to provide users with an immersive experience.
 
-## Expanding the ESLint configuration
+The project leverages React.js, Material-UI (MUI), and CSS modules to ensure reusable, scalable, and visually consistent components. It also incorporates dynamic routing and event handling to enhance interactivity and functionality.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+1. Dynamic Asset Cards
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+- Each card represents a specific financial category: Stock, Crypto, or NFT.
+- Information displayed includes:
+  - Price: Current price of the asset.
+  - Market Cap: Total market capitalization.
+  - 24-Hour Change: Shows the percentage of change in value within the last 24 hours.
+- Additional customizations for NFTs include "Floor Price" and "Total Volume" instead of "Market Cap."
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+2. Clickable Elements
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+- "View Report" Button: Redirects users to an external website dynamically, specific to the asset category (e.g., NVIDIA's site for a Stock card, Bitcoin's page for Crypto, etc.).
+- Bookmark Icon: Toggles between active and inactive states when clicked, providing a visual indicator for bookmarked assets.
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
-# assets-cards
+3. Dynamic Styling
+
+- Each card and its elements dynamically adjust their styles based on the asset category:
+  - Stock: Green theme.
+  - Crypto: Blue theme.
+  - NFT: Pink theme.
+- Conditional CSS styling ensures consistency while maintaining unique branding for each category.
+
+4. Responsive Design
+
+- The cards are fully responsive, ensuring seamless display across devices of all screen sizes.
+- All UI components adapt dynamically to user interactions.
+
+5. Category Badge
+
+- A circular badge, positioned above each card, displays the asset category with colors corresponding to the category theme.
+
+6. Custom Material-UI Components
+
+- Utilizes Material-UI icons for enhanced visual appeal:
+  - Bookmark Icon for favoriting assets.
+  - Keyboard Arrow Icons to indicate positive or negative changes.
+  - Language Icon for external links.
+
+# How to Use
+
+1. Installation
+
+- Clone the repository.
+- Install dependencies:
+  - npm install
+
+2. Run the Project
+
+- Start the development server:
+
+  - npm run dev
+
+- The project will be available at http://localhost:5173.
+
+3. Customize
+
+- Modify the AssetCard component's props to include new categories, data, or styles.
+- Add URLs for external links dynamically using the url property.
